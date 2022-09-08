@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E9138CF428CA349200F8DC1C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9138CF328CA349200F8DC1C /* main.swift */; };
+		E9138CFC28CA34FA00F8DC1C /* XMLParsing in Frameworks */ = {isa = PBXBuildFile; productRef = E9138CFB28CA34FA00F8DC1C /* XMLParsing */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9138CFC28CA34FA00F8DC1C /* XMLParsing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +80,9 @@
 			dependencies = (
 			);
 			name = XMLSwiftParseDemo;
+			packageProductDependencies = (
+				E9138CFB28CA34FA00F8DC1C /* XMLParsing */,
+			);
 			productName = XMLSwiftParseDemo;
 			productReference = E9138CF028CA349200F8DC1C /* XMLSwiftParseDemo */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +111,9 @@
 				Base,
 			);
 			mainGroup = E9138CE728CA349200F8DC1C;
+			packageReferences = (
+				E9138CFA28CA34FA00F8DC1C /* XCRemoteSwiftPackageReference "XMLParsing" */,
+			);
 			productRefGroup = E9138CF128CA349200F8DC1C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -280,6 +288,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9138CFA28CA34FA00F8DC1C /* XCRemoteSwiftPackageReference "XMLParsing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ShawnMoore/XMLParsing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9138CFB28CA34FA00F8DC1C /* XMLParsing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9138CFA28CA34FA00F8DC1C /* XCRemoteSwiftPackageReference "XMLParsing" */;
+			productName = XMLParsing;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E9138CE828CA349200F8DC1C /* Project object */;
 }
