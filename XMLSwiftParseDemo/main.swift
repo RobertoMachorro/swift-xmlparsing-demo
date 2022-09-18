@@ -39,7 +39,6 @@ struct NS2: Codable {
 	var airportlist: AirportList
 }
 
-let parseableXml = xml.replacingOccurrences(of: "ns2:body", with: "ns2")
 if let data = xml.data(using: .utf8) {
 	do {
 		let body = try XMLDecoder().decode(NS2.self, from: data)
