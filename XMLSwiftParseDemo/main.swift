@@ -48,3 +48,17 @@ if let data = xml.data(using: .utf8) {
 		print(error)
 	}
 }
+
+let range = NSRange(location: 0, length: xml.utf8.count)
+if let regex = try? NSRegularExpression(pattern: "(<airportlist>.+</airportlist>)"),
+   let match = regex.firstMatch(in: xml, range: range),
+   let dataRange = Range(match.range(at: 1), in: xml),
+   let data = String(xml[dataRange]).data(using: .utf8) {
+	do {
+		let body = try XMLDecoder().decode(AirportList.self, from: data)
+		let returnData = try XMLEncoder().encode(body, withRootKey: "airportlist")
+		print(String(data: returnData, encoding: .utf8) ?? "")
+	} catch {
+		print(error)
+	}
+}
